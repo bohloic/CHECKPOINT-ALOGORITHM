@@ -1,0 +1,25 @@
+ALGORITHM readSentence
+VAR
+    mots,nb_voy : INTEGER:=0;
+    phrase : STRING;
+    i,j,tail:INTEGER;
+    voy : ARRAY_OF CHAR[12] := ["a","e","i","o","u","y","A","E","I","O","U","Y"];
+BEGIN
+    write("Veuillez saisir une phrase svp ");
+    read(phrase);
+    tail := lenght.phrase;
+    FOR i FROM 0 TO tail STEP 1 DO
+        IF ((phrase[i] = " ") OR (phrase[i] = ".")) THEN
+            mots := mots + 1;
+        END_IF
+        FOR j FROM 0 TO lenght.voy STEP 1  DO
+            IF (phrase[i] = voy[j]) THEN
+                nb_voy := nb_voy + 1;
+            END_IF
+        END_FOR
+        
+    END_FOR 
+    write("La longueur de la phrase est",tail);
+    write("Le nombre de mots dans la phrase est",mots);
+    write("Le nombre de voyelles dans la phrase est",nb_voy);    
+END
